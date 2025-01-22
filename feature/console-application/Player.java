@@ -3,10 +3,19 @@
 
 public class Player
 {
-	public static void main (String [] args) 
+	String name;
+	int score = 0;
+	
+	boolean addPlayer(String addedName) 
 	{
-		System.out.println("Hello World\n");
-		// Bohan Chen
-		
+		name = addedName;
+		return true;
 	}
+	
+	int incrementScore(int newPoints) 
+	{
+		score += newPoints;
+		return score;
+	}
+	
 }
