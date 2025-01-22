@@ -8,8 +8,7 @@ public class Player
 	
 	boolean addPlayer(String addedName) 
 	{
-		name = addedName;
-		return true;
+
 	}
 	
 	int incrementScore(int newPoints) 
