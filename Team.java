@@ -2,6 +2,7 @@
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Team
 {
@@ -9,7 +10,6 @@ public class Team
 	private List<Player> teamList;
 	
 	public Team() {
-		numCircles = 0;
 		teamList = new ArrayList<Player>();
 	}
 	
@@ -18,9 +18,9 @@ public class Team
 		boolean playerAlreadyAdded = false;
 		if (!teamList.isEmpty()) 
 		{
-			for (int i = 0; i < teamList.length; i++)
+			for (int i = 0; i < teamList.size(); i++)
 			{
-				if (teamList.get(i).name.equals(addedPlayer.name))
+				if (teamList.get(i).getName().equals(addedPlayer.getName()))
 				{
 					playerAlreadyAdded = true;
 					break;
@@ -38,9 +38,9 @@ public class Team
 	{
 		int counter = 0;
 		boolean found = false;
-		while ((!found) && (counter < teamList.length)) 
+		while ((!found) && (counter < teamList.size())) 
 		{
-			if (teamList.get(counter).name.equals(playerName)) 
+			if (teamList.get(counter).getName().equals(playerName)) 
 			{
 				teamList.remove(counter);
 				found = true;
@@ -55,11 +55,20 @@ public class Team
 	
 	public void displayAllEverything() 
 	{
-		for (int i = 0; i < teamList.length; i++) 
+		for (int i = 0; i < teamList.size(); i++) 
 		{
-			System.out.println("Player: " + teamList.get(i).name + "\t Score: " + teamList.get(i).score);
+			System.out.println("Player: " + teamList.get(i).getName() + "\t Score: " + teamList.get(i).getScore());
 		}
 			
 	}
 	
+	public int getLength()
+	{
+		return teamList.size();
+	}
+	
+	public Player getPlayerAtIndex(int indexVal)
+	{
+		return teamList.get(indexVal);
+	}
 }
