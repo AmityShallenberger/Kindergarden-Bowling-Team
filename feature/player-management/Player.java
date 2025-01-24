@@ -3,15 +3,17 @@
 
 public class Player
 {
-	String name;
-	int score = 0;
 	
-	boolean addPlayer(String addedName) 
+	private String name;
+	private int score;
+	
+	public Player(String addedName)
 	{
-
+		name = addedName;
+		score = 0;
 	}
 	
-	int incrementScore(int newPoints) 
+	public int incrementScore(int newPoints) 
 	{
 		score += newPoints;
 		return score;
