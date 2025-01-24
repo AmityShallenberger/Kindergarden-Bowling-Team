@@ -1,3 +1,4 @@
+<<<<<<< HEAD:feature/console-application/BowlingTeamApp.java
 
 
 import java.util.Scanner;
@@ -104,5 +105,8 @@ public class BowlingTeamApp
 		}
 		
 	}
+=======
+public class bowlingTeamApp {
+>>>>>>> 65ed3b3e7bfc368d15a59802d71e67cf9b3b09fa:BowlingTeamApp.java
     
 }
