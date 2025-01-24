@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class BowlingTeamApp 
 {
 	public static void main (String [] args) 
@@ -93,6 +92,7 @@ public class BowlingTeamApp
 			{
 				shouldLoop = false;
 				System.out.println("Exiting Application...");
+				input.close();
 			}
 			else 
 			{
