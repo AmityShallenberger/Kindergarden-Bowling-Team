@@ -19,4 +19,13 @@ public class Player
 		return score;
 	}
 	
+	public int getScore() 
+	{
+		return score;
+	}
+	
+	public String getName() 
+	{
+		return name;
+	}
 }

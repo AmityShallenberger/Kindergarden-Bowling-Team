@@ -1,6 +1,3 @@
-<<<<<<< HEAD:feature/console-application/BowlingTeamApp.java
-
-
 import java.util.Scanner;
 
 
@@ -19,7 +16,7 @@ public class BowlingTeamApp
 		String updatePlayerScore = "4";
 		String exitApp = "5";
 		
-		Team<Player> bowlingTeam = new Team<>;
+		Team bowlingTeam = new Team();
 		
 		while (shouldLoop == true) 
 		{
@@ -41,7 +38,7 @@ public class BowlingTeamApp
 				// Add new player code
 				bowlingTeam.addPlayerToList(new Player(userInput));
 			}
-			else if ( (bowlingTeam.length < 1) && ( 
+			else if ( (bowlingTeam.getLength() < 1) && ( 
 				(userInput.equals(removePlayer)) || 
 				(userInput.equals(displayAll)) || 
 				(userInput.equals(updatePlayerScore)) ) )
@@ -69,9 +66,9 @@ public class BowlingTeamApp
 			
 				boolean found = false;
 				int index = 0;
-				while ((!found) && (index < bowlingTeam.length)) 
+				while ((!found) && (index < bowlingTeam.getLength())) 
 				{
-					if (bowlingTeam.get[i].name.equalsIgnoreCase(playerUpdate))
+					if (bowlingTeam.getPlayerAtIndex(index).getName().equalsIgnoreCase(playerUpdate))
 					{
 						found = true;
 					}
@@ -88,7 +85,7 @@ public class BowlingTeamApp
 				{
 					System.out.print("Input how much the player scored: ");
 					int addScore = input.nextInt();
-					System.out.println(playerUpdate + "'s new score: " + bowlingTeam.get[index].incrementScore(addScore));
+					System.out.println(playerUpdate + "'s new score: " + bowlingTeam.getPlayerAtIndex(index).incrementScore(addScore));
 				}
 				
 			}
@@ -105,8 +102,4 @@ public class BowlingTeamApp
 		}
 		
 	}
-=======
-public class bowlingTeamApp {
->>>>>>> 65ed3b3e7bfc368d15a59802d71e67cf9b3b09fa:BowlingTeamApp.java
-    
 }
